@@ -16,7 +16,12 @@ namespace THITN
         public static SqlConnection conn = new SqlConnection();
         public static String connstr_publisher = "Data Source=DESKTOP-E4N1MRS;Initial Catalog=THI_TN;Integrated Security=True";
         public static String servername = "";
-        public static BindingSource bds_dspm = new BindingSource();
+        public static String username = "";
+        public static String mlogin = "";
+        public static String password = "";
+
+
+        public static BindingSource bds_dspm = new BindingSource();  // luôn kết nối đến server, thay đổi khi dữ liệu thay đổi.
         public static frmMain frmChinh;
 
 

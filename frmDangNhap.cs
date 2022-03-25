@@ -84,7 +84,12 @@ namespace THITN
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-
+            if(txtLogin.Text.Trim() == "" || txtPassword.Text.Trim() == "")
+            {
+                MessageBox.Show("Login name và password không được để trống", "", MessageBoxButtons.OK);
+                return;
+            }
+            
         }
 
         private void txtMatKhau_TextChanged(object sender, EventArgs e)
@@ -98,6 +103,21 @@ namespace THITN
         }
 
         private void lbMatKhau_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void imageListBoxControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
