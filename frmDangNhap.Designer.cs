@@ -39,6 +39,8 @@
             this.lbCoSo = new System.Windows.Forms.Label();
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.grBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -160,11 +162,14 @@
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
+           
             // frmDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(730, 414);
+            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.grBox);
@@ -174,6 +179,7 @@
             this.grBox.ResumeLayout(false);
             this.grBox.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -188,7 +194,12 @@
         private System.Windows.Forms.TextBox txtLogin;
         private System.Windows.Forms.Button btnDangNhap;
         private System.Windows.Forms.Button btnThoat;
+<<<<<<< HEAD
         private System.Windows.Forms.RadioButton rdoSinhVien;
         private System.Windows.Forms.RadioButton rdoGiangVien;
+=======
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
+>>>>>>> b4cf343f46e19a97e5be65b66042be05f488fdbd
     }
 }

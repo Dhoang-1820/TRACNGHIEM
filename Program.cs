@@ -14,7 +14,7 @@ namespace THITN
         /// The main entry point for the application.
         /// </summary>
         public static SqlConnection conn = new SqlConnection();
-        public static String connstr_publisher = "Data Source=DESKTOP-8BQ2NC6;Initial Catalog=THI_TN;Integrated Security=True";
+        public static String connstr_publisher = "Data Source=DESKTOP-E4N1MRS;Initial Catalog=THI_TN;Integrated Security=True";
         public static String servername = "";
         public static String username = "";
         public static String mlogin = "";
