@@ -161,4 +161,8 @@ E:\CSDL-PhanTan\TRACNGHIEM\obj\Debug\TRACNGHIEM.csprojResolveAssemblyReference.c
 E:\CSDL-PhanTan\TRACNGHIEM\obj\Debug\THITN.exe
 E:\CSDL-PhanTan\TRACNGHIEM\obj\Debug\THITN.pdb
 >>>>>>> b4cf343f46e19a97e5be65b66042be05f488fdbd
+<<<<<<< HEAD
 D:\Programming\Detai\TRACNGHIEM\obj\Debug\THITN.frmDangKy.resources
+=======
+E:\CSDL-PhanTan\TRACNGHIEM\obj\Debug\THITN.frmDSDK.resources
+>>>>>>> e05f0f6f2fcd01ea87af42d556f543081dc23b2d

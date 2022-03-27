@@ -196,5 +196,11 @@
         private System.Windows.Forms.RadioButton rdoSinhVien;
         private System.Windows.Forms.RadioButton rdoGiangVien;
 
+<<<<<<< HEAD
+=======
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
+
+>>>>>>> e05f0f6f2fcd01ea87af42d556f543081dc23b2d
     }
 }
