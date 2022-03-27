@@ -41,6 +41,15 @@ namespace THITN
             }
         }
 
+        public void HienThiMenu()
+        {
+            MaSo.Text = "Mã GV: " + Program.username;
+            HoTen.Text = "Họ và tên: " + Program.mHoten;
+            Nhom.Text = "Nhóm: " + Program.mGroup;
+            //rib_QuanLy.Visible = true;
+            rib_SinhVien.Visible = true;
+        }
+
         private void toolStripStatusLabel1_Click(object sender, EventArgs e)
         {
 
@@ -49,6 +58,18 @@ namespace THITN
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
 
+        }
+
+        private void btn_TaoTaiKhoan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(frmDangKy));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frmDangKy f = new frmDangKy();
+                f.MdiParent = this;
+                f.Show();
+            }
         }
     }
 }
