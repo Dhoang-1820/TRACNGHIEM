@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 DevExpress.XtraBars.Ribbon.RibbonControl, DevExpress.XtraBars.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
 DevExpress.XtraTabbedMdi.XtraTabbedMdiManager, DevExpress.XtraBars.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+=======
+DevExpress.XtraTabbedMdi.XtraTabbedMdiManager, DevExpress.XtraBars.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.XtraBars.Ribbon.RibbonControl, DevExpress.XtraBars.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+>>>>>>> 9f2d3953bbb589fb7370bfe730f0231e52785e9f

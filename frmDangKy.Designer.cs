@@ -46,11 +46,13 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.grbDangKy = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.grbDangKy.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -58,7 +60,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.Control;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(200, 72);
+            this.label1.Location = new System.Drawing.Point(99, 40);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 26);
@@ -71,7 +73,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(198, 141);
+            this.label2.Location = new System.Drawing.Point(97, 109);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(115, 21);
@@ -82,7 +84,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(198, 216);
+            this.label3.Location = new System.Drawing.Point(97, 184);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(121, 21);
@@ -93,7 +95,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(196, 287);
+            this.label4.Location = new System.Drawing.Point(95, 255);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(113, 21);
@@ -104,7 +106,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(196, 358);
+            this.label5.Location = new System.Drawing.Point(95, 326);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(79, 21);
@@ -113,17 +115,18 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(198, 431);
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(135, 393);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(111, 31);
             this.button1.TabIndex = 5;
-            this.button1.Text = "Đăng nhập";
+            this.button1.Text = "Đăng ký";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(443, 431);
+            this.button2.Location = new System.Drawing.Point(339, 393);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(111, 31);
@@ -136,7 +139,7 @@
             // 
             this.comboBox1.ForeColor = System.Drawing.SystemColors.ScrollBar;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(347, 72);
+            this.comboBox1.Location = new System.Drawing.Point(260, 40);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(230, 28);
             this.comboBox1.TabIndex = 7;
@@ -145,21 +148,21 @@
             // 
             this.comboBox3.ForeColor = System.Drawing.SystemColors.ScrollBar;
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(347, 141);
+            this.comboBox3.Location = new System.Drawing.Point(260, 109);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(230, 28);
             this.comboBox3.TabIndex = 9;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(347, 213);
+            this.textBox1.Location = new System.Drawing.Point(260, 181);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(230, 28);
             this.textBox1.TabIndex = 10;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(347, 358);
+            this.textBox2.Location = new System.Drawing.Point(260, 326);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(230, 28);
             this.textBox2.TabIndex = 11;
@@ -168,7 +171,7 @@
             // 
             this.comboBox4.ForeColor = System.Drawing.Color.DarkGray;
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(347, 284);
+            this.comboBox4.Location = new System.Drawing.Point(260, 252);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(230, 28);
             this.comboBox4.TabIndex = 12;
@@ -176,17 +179,18 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(137, 72);
+            this.pictureBox1.Location = new System.Drawing.Point(45, 34);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(54, 39);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(137, 141);
+            this.pictureBox2.Location = new System.Drawing.Point(45, 101);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(54, 36);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -197,7 +201,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(139, 205);
+            this.pictureBox3.Location = new System.Drawing.Point(45, 176);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(54, 36);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -208,45 +212,56 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(139, 279);
+            this.pictureBox4.Location = new System.Drawing.Point(45, 250);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(54, 33);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 16;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(139, 351);
+            this.pictureBox5.Location = new System.Drawing.Point(45, 319);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(54, 35);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 17;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            // 
+            // grbDangKy
+            // 
+            this.grbDangKy.Controls.Add(this.comboBox1);
+            this.grbDangKy.Controls.Add(this.pictureBox5);
+            this.grbDangKy.Controls.Add(this.label1);
+            this.grbDangKy.Controls.Add(this.pictureBox4);
+            this.grbDangKy.Controls.Add(this.label2);
+            this.grbDangKy.Controls.Add(this.pictureBox3);
+            this.grbDangKy.Controls.Add(this.label3);
+            this.grbDangKy.Controls.Add(this.pictureBox2);
+            this.grbDangKy.Controls.Add(this.label4);
+            this.grbDangKy.Controls.Add(this.pictureBox1);
+            this.grbDangKy.Controls.Add(this.label5);
+            this.grbDangKy.Controls.Add(this.comboBox4);
+            this.grbDangKy.Controls.Add(this.button1);
+            this.grbDangKy.Controls.Add(this.textBox2);
+            this.grbDangKy.Controls.Add(this.button2);
+            this.grbDangKy.Controls.Add(this.textBox1);
+            this.grbDangKy.Controls.Add(this.comboBox3);
+            this.grbDangKy.Location = new System.Drawing.Point(106, 12);
+            this.grbDangKy.Name = "grbDangKy";
+            this.grbDangKy.Size = new System.Drawing.Size(542, 447);
+            this.grbDangKy.TabIndex = 18;
+            this.grbDangKy.TabStop = false;
             // 
             // frmDangKy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(712, 584);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(717, 482);
+            this.Controls.Add(this.grbDangKy);
             this.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmDangKy";
@@ -257,8 +272,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.grbDangKy.ResumeLayout(false);
+            this.grbDangKy.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -281,5 +297,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.GroupBox grbDangKy;
     }
 }

@@ -55,9 +55,7 @@ namespace THITN
         {
             if (KetNoi_CSDLGOC() == 0) return;
             LayDSPM("SELECT * FROM Get_Subscribes");
-            cmbCoso.SelectedIndex = 1;
-            cmbCoso.SelectedIndex = 0;
-
+            cmbCoso.SelectedIndex = 1; cmbCoso.SelectedIndex = 0;
         }
 
         private void cmbCoso_SelectedIndexChanged(object sender, EventArgs e)
@@ -84,11 +82,37 @@ namespace THITN
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            if(txtLogin.Text.Trim() == "" || txtPassword.Text.Trim() == "")
+            
+            if (txtLogin.Text.Trim() == "" || txtPassword.Text.Trim() == "")
             {
                 MessageBox.Show("Login name và password không được để trống", "", MessageBoxButtons.OK);
                 return;
             }
+            Program.mlogin = txtLogin.Text;
+            Program.password = txtPassword.Text;
+            if (Program.KetNoi() == 0) return;
+            Program.mChinhanh = cmbCoso.SelectedIndex;
+            Program.mloginDN = Program.mlogin;
+            Program.passwordDN = Program.password;
+            String strLenh = "EXEC SP_Lay_Thong_Tin_GV_Tu_Login '" + Program.mlogin + "'";
+
+            Program.myreader = Program.ExecSqlDataReader(strLenh);
+            if (Program.myreader == null) return;
+            Program.myreader.Read();
+
+            Program.username = Program.myreader.GetString(0);
+            if (Convert.IsDBNull(Program.username))
+            {
+                MessageBox.Show("Login bạn nhập không có quyền truy cập dữ liệu.\nBạn xem lại username và password", "", MessageBoxButtons.OK);
+                return;
+            }
+            Program.mHoten = Program.myreader.GetString(1);
+            Program.mGroup = Program.myreader.GetString(2);
+            Program.myreader.Close();
+            Program.conn.Close();
+            Program.frmChinh.HienThiMenu();
+            
+            
             
         }
 
@@ -109,6 +133,7 @@ namespace THITN
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
+
             Close();
         }
 
@@ -118,6 +143,16 @@ namespace THITN
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdoGiangVien_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdoSinhVien_CheckedChanged(object sender, EventArgs e)
         {
 
         }
