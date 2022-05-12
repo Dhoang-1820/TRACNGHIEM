@@ -13,16 +13,16 @@ namespace THITN
 {
     public partial class frmDangNhap : Form
     {
-        SqlConnection conn_publisher = new SqlConnection();
+        
 
         private void LayDSPM(String cmd)
         {
             DataTable dt = new DataTable();
-            if (conn_publisher.State == ConnectionState.Closed)
-                conn_publisher.Open();
-            SqlDataAdapter da = new SqlDataAdapter(cmd, conn_publisher);
+            if (Program.conn_publisher.State == ConnectionState.Closed)
+                Program.conn_publisher.Open();
+            SqlDataAdapter da = new SqlDataAdapter(cmd, Program.conn_publisher);
             da.Fill(dt);
-            conn_publisher.Close();
+            Program.conn_publisher.Close();
             Program.bds_dspm.DataSource = dt;
             cmbCoso.DataSource = Program.bds_dspm;
             cmbCoso.DisplayMember = "TENCS";
@@ -33,27 +33,10 @@ namespace THITN
             InitializeComponent();
         }
 
-        private int KetNoi_CSDLGOC()
-        {
-            if (conn_publisher != null && conn_publisher.State == ConnectionState.Open)
-            {
-                conn_publisher.Close();
-            }
-            try
-            {
-                conn_publisher.ConnectionString = Program.connstr_publisher;
-                conn_publisher.Open();
-                return 1;
-            } catch (Exception e)
-            {
-                MessageBox.Show("Lỗi kết nối về cơ sở dữ liệu gốc.\nBạn xem lại tên server của Publisher, và tên CSDL trong chuỗi kết nối.\n" + e.Message);
-                return 0;  
-            }
-        }
      
         private void frmDangNhap_Load(object sender, EventArgs e)
         {
-            if (KetNoi_CSDLGOC() == 0) return;
+            if (Program.KetNoi_CSDLGOC() == 0) return;
             LayDSPM("SELECT * FROM Get_Subscribes");
             cmbCoso.SelectedIndex = 1; cmbCoso.SelectedIndex = 0;
         }
@@ -70,89 +53,70 @@ namespace THITN
             }
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            
             if (txtLogin.Text.Trim() == "" || txtPassword.Text.Trim() == "")
             {
                 MessageBox.Show("Login name và password không được để trống", "", MessageBoxButtons.OK);
                 return;
             }
+
             Program.mlogin = txtLogin.Text;
             Program.password = txtPassword.Text;
+            
             if (Program.KetNoi() == 0) return;
+            
             Program.mChinhanh = cmbCoso.SelectedIndex;
             Program.mloginDN = Program.mlogin;
             Program.passwordDN = Program.password;
-            String strLenh = "EXEC SP_Lay_Thong_Tin_GV_Tu_Login '" + Program.mlogin + "'";
+
+            string strLenh;
+            if (rdoGiangVien.Checked)
+            {
+                strLenh = "EXEC SP_Lay_Thong_Tin_GV_Tu_Login '" + Program.mlogin + "'";
+            }
+            else
+            {
+                strLenh = "EXEC SP_Lay_Thong_Tin_SV_Tu_Login '" + Program.mlogin + "'";
+            }
 
             Program.myreader = Program.ExecSqlDataReader(strLenh);
+            
             if (Program.myreader == null) return;
+            
             Program.myreader.Read();
-
             Program.username = Program.myreader.GetString(0);
+            
             if (Convert.IsDBNull(Program.username))
             {
                 MessageBox.Show("Login bạn nhập không có quyền truy cập dữ liệu.\nBạn xem lại username và password", "", MessageBoxButtons.OK);
                 return;
             }
+            
+            
             Program.mHoten = Program.myreader.GetString(1);
             Program.mGroup = Program.myreader.GetString(2);
             Program.myreader.Close();
             Program.conn.Close();
             Program.frmChinh.HienThiMenu();
-            
-            
-            
-        }
-
-        private void txtMatKhau_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtTaiKhoan_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbMatKhau_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-
             Close();
         }
 
-        private void imageListBoxControl1_SelectedIndexChanged(object sender, EventArgs e)
+        private void grBox_Enter(object sender, EventArgs e)
         {
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void txtPassword_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void rdoGiangVien_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rdoSinhVien_CheckedChanged(object sender, EventArgs e)
+        private void txtLogin_TextChanged(object sender, EventArgs e)
         {
 
         }
