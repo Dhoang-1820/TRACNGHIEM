@@ -47,9 +47,10 @@
             this.cmbCoso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCoso.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCoso.FormattingEnabled = true;
-            this.cmbCoso.Location = new System.Drawing.Point(163, 80);
+            this.cmbCoso.Location = new System.Drawing.Point(204, 100);
+            this.cmbCoso.Margin = new System.Windows.Forms.Padding(4);
             this.cmbCoso.Name = "cmbCoso";
-            this.cmbCoso.Size = new System.Drawing.Size(230, 28);
+            this.cmbCoso.Size = new System.Drawing.Size(286, 28);
             this.cmbCoso.TabIndex = 0;
             this.cmbCoso.SelectedIndexChanged += new System.EventHandler(this.cmbCoso_SelectedIndexChanged);
             // 
@@ -66,19 +67,21 @@
             this.grBox.Controls.Add(this.lbCoSo);
             this.grBox.Controls.Add(this.cmbCoso);
             this.grBox.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grBox.Location = new System.Drawing.Point(129, 48);
+            this.grBox.Location = new System.Drawing.Point(161, 60);
+            this.grBox.Margin = new System.Windows.Forms.Padding(4);
             this.grBox.Name = "grBox";
-            this.grBox.Size = new System.Drawing.Size(450, 312);
+            this.grBox.Padding = new System.Windows.Forms.Padding(4);
+            this.grBox.Size = new System.Drawing.Size(562, 390);
             this.grBox.TabIndex = 1;
             this.grBox.TabStop = false;
-            this.grBox.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // btnThoat
             // 
             this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Location = new System.Drawing.Point(277, 235);
+            this.btnThoat.Location = new System.Drawing.Point(346, 294);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(4);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(90, 31);
+            this.btnThoat.Size = new System.Drawing.Size(112, 39);
             this.btnThoat.TabIndex = 3;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
@@ -87,9 +90,10 @@
             // btnDangNhap
             // 
             this.btnDangNhap.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangNhap.Location = new System.Drawing.Point(106, 235);
+            this.btnDangNhap.Location = new System.Drawing.Point(132, 294);
+            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(4);
             this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(111, 31);
+            this.btnDangNhap.Size = new System.Drawing.Size(139, 39);
             this.btnDangNhap.TabIndex = 2;
             this.btnDangNhap.Text = "Đăng nhập";
             this.btnDangNhap.UseVisualStyleBackColor = true;
@@ -98,7 +102,8 @@
             // rdoSinhVien
             // 
             this.rdoSinhVien.AutoSize = true;
-            this.rdoSinhVien.Location = new System.Drawing.Point(268, 37);
+            this.rdoSinhVien.Location = new System.Drawing.Point(335, 46);
+            this.rdoSinhVien.Margin = new System.Windows.Forms.Padding(4);
             this.rdoSinhVien.Name = "rdoSinhVien";
             this.rdoSinhVien.Size = new System.Drawing.Size(99, 25);
             this.rdoSinhVien.TabIndex = 9;
@@ -111,7 +116,8 @@
             // 
             this.rdoGiangVien.AutoSize = true;
             this.rdoGiangVien.Checked = true;
-            this.rdoGiangVien.Location = new System.Drawing.Point(107, 37);
+            this.rdoGiangVien.Location = new System.Drawing.Point(134, 46);
+            this.rdoGiangVien.Margin = new System.Windows.Forms.Padding(4);
             this.rdoGiangVien.Name = "rdoGiangVien";
             this.rdoGiangVien.Size = new System.Drawing.Size(110, 25);
             this.rdoGiangVien.TabIndex = 8;
@@ -122,45 +128,48 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(163, 176);
+            this.txtPassword.Location = new System.Drawing.Point(204, 220);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(230, 28);
+            this.txtPassword.Size = new System.Drawing.Size(286, 28);
             this.txtPassword.TabIndex = 5;
-            this.txtPassword.TextChanged += new System.EventHandler(this.txtMatKhau_TextChanged);
+            this.txtPassword.Text = "123";
             // 
             // txtLogin
             // 
-            this.txtLogin.Location = new System.Drawing.Point(163, 131);
+            this.txtLogin.Location = new System.Drawing.Point(204, 164);
+            this.txtLogin.Margin = new System.Windows.Forms.Padding(4);
             this.txtLogin.Name = "txtLogin";
-            this.txtLogin.Size = new System.Drawing.Size(230, 28);
+            this.txtLogin.Size = new System.Drawing.Size(286, 28);
             this.txtLogin.TabIndex = 4;
-            this.txtLogin.TextChanged += new System.EventHandler(this.txtTaiKhoan_TextChanged);
+            this.txtLogin.Text = "kdt";
             // 
             // lbPassword
             // 
             this.lbPassword.AutoSize = true;
-            this.lbPassword.Location = new System.Drawing.Point(59, 183);
+            this.lbPassword.Location = new System.Drawing.Point(74, 229);
+            this.lbPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbPassword.Name = "lbPassword";
-            this.lbPassword.Size = new System.Drawing.Size(84, 21);
+            this.lbPassword.Size = new System.Drawing.Size(79, 21);
             this.lbPassword.TabIndex = 3;
-            this.lbPassword.Text = "Password";
-            this.lbPassword.Click += new System.EventHandler(this.lbMatKhau_Click);
+            this.lbPassword.Text = "Mật khẩu";
             // 
             // lbLogin
             // 
             this.lbLogin.AutoSize = true;
-            this.lbLogin.Location = new System.Drawing.Point(59, 134);
+            this.lbLogin.Location = new System.Drawing.Point(74, 168);
+            this.lbLogin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbLogin.Name = "lbLogin";
-            this.lbLogin.Size = new System.Drawing.Size(53, 21);
+            this.lbLogin.Size = new System.Drawing.Size(84, 21);
             this.lbLogin.TabIndex = 2;
-            this.lbLogin.Text = "Login";
-            this.lbLogin.Click += new System.EventHandler(this.label2_Click);
+            this.lbLogin.Text = "Tài khoản";
             // 
             // lbCoSo
             // 
             this.lbCoSo.AutoSize = true;
-            this.lbCoSo.Location = new System.Drawing.Point(59, 84);
+            this.lbCoSo.Location = new System.Drawing.Point(74, 105);
+            this.lbCoSo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbCoSo.Name = "lbCoSo";
             this.lbCoSo.Size = new System.Drawing.Size(56, 21);
             this.lbCoSo.TabIndex = 1;
@@ -168,10 +177,12 @@
             // 
             // frmDangNhap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(730, 414);
+            this.ClientSize = new System.Drawing.Size(912, 518);
             this.Controls.Add(this.grBox);
+            this.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmDangNhap";
             this.Text = "Đăng nhập";
             this.Load += new System.EventHandler(this.frmDangNhap_Load);
@@ -188,16 +199,12 @@
         private System.Windows.Forms.Label lbPassword;
         private System.Windows.Forms.Label lbLogin;
         private System.Windows.Forms.Label lbCoSo;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.TextBox txtLogin;
         private System.Windows.Forms.Button btnDangNhap;
         private System.Windows.Forms.Button btnThoat;
 
         private System.Windows.Forms.RadioButton rdoSinhVien;
         private System.Windows.Forms.RadioButton rdoGiangVien;
-
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-
+        public System.Windows.Forms.TextBox txtPassword;
+        public System.Windows.Forms.TextBox txtLogin;
     }
 }

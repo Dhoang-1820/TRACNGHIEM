@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace THITN
@@ -20,16 +15,40 @@ namespace THITN
         {
 
         }
-        
+
         private Form CheckExists(Type ftype)
         {
             foreach (Form f in this.MdiChildren)
                 if (f.GetType() == ftype)
                     return f;
-            return null; 
+            return null;
+        }        
+
+        public void HienThiMenu()
+        {
+            MaSo.Text = "Mã GV: " + Program.username;
+            HoTen.Text = "Họ và tên: " + Program.mHoten;
+            Nhom.Text = "Nhóm: " + Program.mGroup;
+            btn_DangNhap.Enabled = false;
+            if (Program.mGroup == "SINHVIEN")
+                rib_SinhVien.Visible = true;
+            if (Program.mGroup == "GIANGVIEN")
+            {
+                rib_QuanLy.Visible = true;
+                btn_TaoTaiKhoan.Enabled = false;
+                btnKhoa.Enabled = btnLop.Enabled = btnMonHoc.Enabled = btnGVDK.Enabled = false;
+            }
+                
+            if (Program.mGroup == "COSO" || Program.mGroup == "TRUONG")
+            {
+                btn_TaoTaiKhoan.Enabled = true;
+                rib_QuanLy.Visible = true;
+                rib_BaoCao.Visible = true;
+            }    
+            btn_DangXuat.Enabled = true;
         }
 
-        private void btb_DangNhap_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void btn_DangNhap_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Form frm = this.CheckExists(typeof(frmDangNhap));
             if (frm != null) frm.Activate();
@@ -39,25 +58,6 @@ namespace THITN
                 f.MdiParent = this;
                 f.Show();
             }
-        }
-
-        public void HienThiMenu()
-        {
-            MaSo.Text = "Mã GV: " + Program.username;
-            HoTen.Text = "Họ và tên: " + Program.mHoten;
-            Nhom.Text = "Nhóm: " + Program.mGroup;
-            //rib_QuanLy.Visible = true;
-            rib_SinhVien.Visible = true;
-        }
-
-        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-
         }
 
         private void btn_TaoTaiKhoan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -70,6 +70,73 @@ namespace THITN
                 f.MdiParent = this;
                 f.Show();
             }
+        }
+
+        private void btnKhoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(frmKhoa));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frmKhoa f = new frmKhoa();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void btnDeThi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(frmBoDe));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frmBoDe f = new frmBoDe();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void btn_DangXuat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            btn_TaoTaiKhoan.Enabled = btn_DangXuat.Enabled = false;
+            rib_QuanLy.Visible = rib_SinhVien.Visible = rib_BaoCao.Visible = false;
+            btn_DangNhap.Enabled = btnKhoa.Enabled = btnLop.Enabled = btnMonHoc.Enabled = btnGVDK.Enabled = true;
+            MaSo.Text = HoTen.Text = Nhom.Text = "";
+            if (Program.conn.State == ConnectionState.Open) Program.conn.Close();
+            foreach (Form f in this.MdiChildren)
+                if (f.IsDisposed == false)
+                    f.Close();
+            btn_DangNhap_ItemClick(sender, e);
+        }
+
+        private void btnDsdkThi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(frmDsdkThi));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frmDsdkThi f = new frmDsdkThi();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void btnBangDiem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(frmBangDiem));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frmBangDiem f = new frmBangDiem();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Program.conn.Close();
+            Program.conn_publisher.Close();
         }
     }
 }
